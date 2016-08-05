@@ -14,4 +14,4 @@
 * limitations under the License.
 */
 
-data class SampleModel(val value: Int)
+data class SampleModel(val position: Int, val name: String)
