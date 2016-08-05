@@ -11,8 +11,8 @@ Usage
 OkHttpClient().newCall(request)
             .execute()
             .parseItem(Model::class.java,
-                success = { return it },
-                error = { return it })
+                success = { it }, //Return item/list of items parsed.
+                error = { it }) //Return int status code.
 ```
 
 Import library
@@ -29,6 +29,8 @@ dependencies {
   compile 'com.github.ppamorim:okoshi:0.1'
 }
 ```
+
+That's all.
 
 License
 -------
