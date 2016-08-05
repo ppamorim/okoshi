@@ -1,11 +1,18 @@
 ![Logo Okoshi][1]
 
+[![](https://jitpack.io/v/ppamorim/okoshi.svg)](https://jitpack.io/#ppamorim/okoshi)
+[![](https://www.bitrise.io/app/90c91f86f7a45c19.svg?token=PtB6gVW9yTi3RTm2Wp227Q)](https://www.bitrise.io/app/90c91f86f7a45c19)
+[![](https://img.shields.io/badge/Size-5 KB-e91e63.svg)](http://www.methodscount.com/?lib=com.github.ppamorim%3Aokoshi%3A0.1)
+
 Tired to write every simple parser for your OkHttp response? I think you would love to use
 this library, it is just a extension, written in Kotlin, that will validate, parse and return
 the data for you as function (or interface if you need).
 
 Usage
 -----
+
+It's very simple, you just need to call the method `.parseItem(Class, Unit, Unit)` to parse
+the data.
 
 ```kotlin
 OkHttpClient().newCall(request)
