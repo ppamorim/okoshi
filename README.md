@@ -4,6 +4,32 @@ Tired to write every simple parser for your OkHttp response? I think you would l
 this library, it is just a extension, written in Kotlin, that will validate, parse and return
 the data for you as function (or interface if you need).
 
+Usage
+-----
+
+```kotlin
+OkHttpClient().newCall(request)
+            .execute()
+            .parseItem(Model::class.java,
+                success = { return it },
+                error = { return it })
+```
+
+Import library
+--------------
+
+```groovy
+repositories {
+  maven {
+    url "https://jitpack.io"
+  }
+}
+
+dependencies {
+  compile 'com.github.ppamorim:okoshi:0.1'
+}
+```
+
 License
 -------
 

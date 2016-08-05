@@ -16,6 +16,11 @@
 
 package com.okoshi
 
+/**
+ * This interface return the result of the request
+ * based on the data of the OkHttp, with the parsed
+ * data.
+ */
 interface OkoshiCallback<in T> {
   fun onSuccess(t: T)
   fun onError(code: Int)
