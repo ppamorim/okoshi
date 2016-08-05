@@ -3,8 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'checkstyle'
 
 dependencies {
-  compile 'com.squareup.moshi:moshi:1.2.0'
-  compile 'com.squareup.okhttp3:okhttp:3.4.1'
+  provided 'com.squareup.moshi:moshi:1.2.0'
+  provided 'com.squareup.okhttp3:okhttp:3.4.1'
   compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
