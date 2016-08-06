@@ -1,4 +1,4 @@
-/*
+package com.okoshi.sample/*
 * Copyright (C) 2016 Pedro Paulo de Amorim
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,8 +19,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.okoshi.parseItem
 import com.okoshi.sample.R
+import com.okoshi.sample.R.layout
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.Request.Builder
 
 const val URL = "https://gist.github.com/ppamorim/d1abc53989f131efacc35046f59e3e5a"
 
@@ -28,7 +30,7 @@ class SampleActivity: AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_sample)
+    setContentView(layout.activity_sample)
   }
 
   override fun onPostCreate(savedInstanceState: Bundle?) {
@@ -42,7 +44,7 @@ class SampleActivity: AppCompatActivity() {
   class DoUglyAsyncTask(): AsyncTask<Any, Any, Any>() {
     override fun doInBackground(vararg params: Any?): Any {
       try {
-        val request = Request.Builder().url(URL).build()
+        val request = Builder().url(URL).build()
         OkHttpClient().newCall(request)
             .execute()
             .parseItem(SampleModel::class.java,
