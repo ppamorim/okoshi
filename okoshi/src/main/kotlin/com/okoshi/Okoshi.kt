@@ -73,7 +73,7 @@ inline fun <T> Response.parseItem(
     clazz: Class<T>,
     success: (t: T) -> Unit,
     error: (code: Int) -> Unit) {
-  if(isSuccessful) {
+  if (isSuccessful) {
     success(moshi.adapter(clazz).fromJson(body().source()))
   } else {
     error(code())
